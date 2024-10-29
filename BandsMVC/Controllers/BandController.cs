@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using BandsMVC.Models;
 
 namespace BandsMVC.Controllers
 {
@@ -9,7 +10,8 @@ namespace BandsMVC.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            var model = _dataService.GetAllBands();
+            return View(model);
         }
         [HttpGet("/Details/{id}")]
         public IActionResult Details(int id)

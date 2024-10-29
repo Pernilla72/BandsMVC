@@ -9,9 +9,13 @@ public class DataService
     new Band (3, "Mora Träsk", "Epic musicgroup, fromed in 1971"),
     ];
 
-    public Band Get(int id)
+    public Band GetBandById(int id)
     {
         var ret = bands.FirstOrDefault(o => o.Id == id);
         return ret;
+    }
+    public Band[] GetAllBands()
+    {
+        return bands.ToArray();
     }
 }
