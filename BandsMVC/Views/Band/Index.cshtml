@@ -5,21 +5,36 @@
 @{
 }
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        @foreach (var band in Model)
-        {
-            
-            <a href="Details/@band.Id">
-            <div>
-                <h2>@band.Id</h2>
-                <p>@band.Name</p>
-                @* <p>@band.Description</p> *@
-            </div>
-            </a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@picocss/pico@2/css/pico.min.css">
+    <style>
+        .band-card {
+            text-decoration: none;
         }
-    </body>
-    </html>
+    </style>
+
+</head>
+<body>
+    <main class="container">
+        <h1>Band List</h1>
+        <div class="grid">
+            @foreach (var band in Model)
+            {
+                <article>
+                    <a href="Details/@band.Id" class="band-card">
+                        <header>
+                            <h2>@band.Name</h2>
+                        </header>
+                        <p>@band.Id</p>
+                        @* <p>@band.Description</p> *@
+                    </a>
+                </article>
+            }
+        </div>
+    </main>
+</body>
+</html>
