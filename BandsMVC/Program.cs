@@ -8,8 +8,8 @@ namespace BandsMVC
 
             // Stöd för controllers och views
             builder.Services.AddControllersWithViews();
-
             var app = builder.Build();
+            app.UseStaticFiles();
 
             app.MapControllers();
 

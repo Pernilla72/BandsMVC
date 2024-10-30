@@ -12,6 +12,6 @@
     <body>
            <h1>@Model.Name</h1>
            <p>@Model.Description</p>
-           <img src="@Model.ImgUrl" alt="Alternate Text" />
+    <img src="@Url.Content($"~/{Model.ImgUrl}")" alt="Alternate Text" />
     </body>
     </html>
