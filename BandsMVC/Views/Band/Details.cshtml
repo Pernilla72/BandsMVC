@@ -13,5 +13,13 @@
            <h1>@Model.Name</h1>
            <p>@Model.Description</p>
     <img src="@Url.Content($"~/{Model.ImgUrl}")" alt="Alternate Text" />
+    <p>
+        <h1>One famous tune from this band</h1>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/@Model.YoutubeUrl"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+    </p>
     </body>
     </html>
