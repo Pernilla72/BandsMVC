@@ -12,11 +12,14 @@
     <body>
         @foreach (var band in Model)
         {
+            
+            <a href="Details/@band.Id">
             <div>
                 <h2>@band.Id</h2>
                 <p>@band.Name</p>
-                <p>@band.Description</p>
+                @* <p>@band.Description</p> *@
             </div>
+            </a>
         }
     </body>
     </html>
