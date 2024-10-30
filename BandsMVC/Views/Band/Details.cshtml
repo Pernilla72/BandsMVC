@@ -13,5 +13,12 @@
            <h1>@Model.Name</h1>
            <p>@Model.Description</p>
     <img src="@Url.Content($"~/{Model.ImgUrl}")" alt="Alternate Text" />
+    <h2>Albums</h2>
+    <ul>
+        @foreach (var album in Model.Albums)
+        {
+            <li>@album</li>
+        }
+    </ul>
     </body>
     </html>
